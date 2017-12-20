@@ -24,7 +24,7 @@ body {
 	padding-bottom: 10px;
 }
 
-.sticky-sidebar {
+.sticky-nav {
 	top: 65px;
 	z-index: 1010;
 }
