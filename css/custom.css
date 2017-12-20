@@ -23,3 +23,8 @@ body {
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
+
+.sticky-sidebar {
+	top: 65px;
+	z-index: 1010;
+}
