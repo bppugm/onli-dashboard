@@ -19,6 +19,11 @@ body {
 	background-color: #3b77a4;
 }
 
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
+	color: #3b77a4;
+	font-weight: 600;
+}
+
 .paper-info, .action {
 	padding-top: 10px;
 	padding-bottom: 10px;
