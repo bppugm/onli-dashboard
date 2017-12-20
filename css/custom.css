@@ -1,7 +1,13 @@
+/*change default colour and font*/
 body {
 	color: rgb(72, 72, 72);
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
+/*
+* MODIFY NAV ITEMS
+*/
+/*add margin to icon on nav item*/
 .nav-item a i.fa {
 	margin-right: 8px;
 }
@@ -11,7 +17,7 @@ body {
 }
 
 .nav-link.active {
-	font-weight: 600;
+	font-weight: 700;
 	color: #3b439c;
 }
 
@@ -21,14 +27,18 @@ body {
 
 .navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
 	color: #3b77a4;
-	font-weight: 600;
+	font-weight: 700;
 }
 
+/*
+* ARTICLE LIST CLASS
+*/
 .paper-info, .action {
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
 
+/*make sticky nav below the navbar*/
 .sticky-nav {
 	top: 65px;
 	z-index: 1010;
