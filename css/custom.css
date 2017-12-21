@@ -42,13 +42,9 @@ body {
 
 ul.nav.scrollable-nav {
     white-space: nowrap;
-    overflow-x: hidden;
+    overflow-x: auto;
     overflow-y: hidden;
     display: block;
-}
-
-ul.nav.scrollable-nav:hover {
-	overflow-x: auto;
 }
 
 ul.nav.scrollable-nav li {
