@@ -36,6 +36,20 @@ body {
   background-color: #fff;
   border-color: #fff #fff #3b439c #fff;
   border-bottom: 3px solid;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+ul.nav.scrollable-nav {
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: block;
+}
+
+ul.nav.scrollable-nav li {
+    display: inline-block;
+    float: none;
 }
 
 /*
