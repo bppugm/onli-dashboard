@@ -45,6 +45,8 @@ ul.nav.scrollable-nav {
     overflow-x: auto;
     overflow-y: hidden;
     display: block;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
 ul.nav.scrollable-nav li {
