@@ -47,6 +47,10 @@ ul.nav.scrollable-nav {
     display: block;
 }
 
+ul.nav.scrollable-nav:hover {
+	overflow-x: auto;
+}
+
 ul.nav.scrollable-nav li {
     display: inline-block;
     float: none;
