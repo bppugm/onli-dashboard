@@ -30,6 +30,14 @@ body {
 	font-weight: 700;
 }
 
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+  color: #3b439c;
+  background-color: #fff;
+  border-color: #fff #fff #3b439c #fff;
+  border-bottom: 3px solid;
+}
+
 /*
 * ARTICLE LIST CLASS
 */
