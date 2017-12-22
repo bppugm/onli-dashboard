@@ -12,7 +12,7 @@ body {
 	margin-right: 8px;
 }
 
-.nav-item a {
+.nav-item, .nav-item a {
 	color: grey;
 }
 
@@ -40,7 +40,7 @@ body {
   border-bottom-left-radius: 3px;
 }
 
-ul.nav.scrollable-nav {
+.nav.scrollable-nav {
     white-space: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
@@ -49,7 +49,7 @@ ul.nav.scrollable-nav {
     -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
-ul.nav.scrollable-nav li {
+.nav.scrollable-nav a {
     display: inline-block;
     float: none;
 }

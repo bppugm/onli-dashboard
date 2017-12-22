@@ -59,28 +59,84 @@
       <!-- HEADER -->
       <section class="header py-5">
         <div class="row justify-content-between">
-          <div class="col-md-6 mb-3 mb-md-0">
-            <h3>Proceeding of ICTA 2017</h3>
+          <div class="col-md-12 mb-3 mb-md-0">
+            <h3 class="m-0">2017 3rd International Conference on Science and Technology - Computer (ICST)</h3>
+            <span class="text-muted">ICST 2017. 13&ndash;14 August, Eastparc hotel, Yogyakarta, Indonesia</span>
           </div>
         </div>
       </section>
 
       <!-- BODY -->
       <section class="body pb-5">
-        <ul class="nav nav-tabs scrollable-nav">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Overview</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Metadata</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Articles</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Report</a>
-          </li>
-        </ul>
+        <!-- NAV TAB -->
+        <nav class="nav nav-tabs scrollable-nav" id="myTab" role="tablist">
+          <a class="nav-item nav-link active" id="nav-overview-tab" data-toggle="tab" href="#nav-overview" role="tab" aria-controls="nav-overview" aria-selected="true">Overview</a>
+          <a class="nav-item nav-link" id="nav-metadata-tab" data-toggle="tab" href="#nav-metadata" role="tab" aria-controls="nav-metadata" aria-selected="false">Metadata</a>
+          <a class="nav-item nav-link" id="nav-articles-tab" data-toggle="tab" href="#nav-articles" role="tab" aria-controls="nav-articles" aria-selected="false">Articles</a>
+          <a class="nav-item nav-link" id="nav-reports-tab" data-toggle="tab" href="#nav-reports" role="tab" aria-controls="nav-reports" aria-selected="false">Reports</a>
+        </nav>
+        <!-- NAV TAB CONTENTS -->
+        <div class="tab-content" id="nav-tabContent">
+          <!-- Overview -->
+          <div class="tab-pane fade show active" id="nav-overview" role="tabpanel" aria-labelledby="nav-overview-tab">
+            <!-- TOTAL STATS -->
+            <div class="row py-4">
+              <div class="col-md">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <h3 class="text-primary"><b>350</b></h3>
+                    <span>Downloads</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <h3 class="text-primary"><b>1240</b></h3>
+                    <span>Views</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <h3 class="text-primary"><b>17</b></h3>
+                    <span>Articles</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- CHART -->
+            <div class="row py-4">
+              <div class="col">
+                <h4>Top viewed articles</h4>
+                <ul class="list-group">
+                  <li class="list-group-item d-flex justify-content-between">
+                    <a href="">The Wireless Energy Transfer recharging system based on the ultra-high frequency by using Yagi-Uda directional antenna</a>
+                    <span class="pl-3">35 views</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between">
+                    <a href="">Comparison of machine learning algorithms for soil type classification</a> 
+                    <span class="pl-3">28 views</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between">
+                    <a href="">Data service orchestration for law enforcement and open criminal justice data interoperability (National Crime Information... </a>
+                    <span class="pl-3">23 views</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="nav-metadata" role="tabpanel" aria-labelledby="nav-metadata-tab">
+            
+          </div>
+          <div class="tab-pane fade" id="nav-articles" role="tabpanel" aria-labelledby="nav-articles-tab">
+            
+          </div>
+          <div class="tab-pane fade" id="nav-reports" role="tabpanel" aria-labelledby="nav-reports-tab">
+            
+          </div>
+        </div>
       </section>
 
       
