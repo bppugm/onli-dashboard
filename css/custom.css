@@ -32,9 +32,9 @@ body {
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #3b439c;
+  color: #3b77a4;
   background-color: #fff;
-  border-color: #fff #fff #3b439c #fff;
+  border-color: #fff #fff #3b77a4 #fff;
   border-bottom: 3px solid;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;

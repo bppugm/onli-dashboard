@@ -69,7 +69,7 @@
       <!-- BODY -->
       <section class="body pb-5">
         <!-- NAV TAB -->
-        <nav class="nav nav-tabs scrollable-nav" id="myTab" role="tablist">
+        <nav class="nav nav-tabs scrollable-nav sticky-top sticky-nav bg-white" id="myTab" role="tablist">
           <a class="nav-item nav-link active" id="nav-overview-tab" data-toggle="tab" href="#nav-overview" role="tab" aria-controls="nav-overview" aria-selected="true">Overview</a>
           <a class="nav-item nav-link" id="nav-metadata-tab" data-toggle="tab" href="#nav-metadata" role="tab" aria-controls="nav-metadata" aria-selected="false">Metadata</a>
           <a class="nav-item nav-link" id="nav-articles-tab" data-toggle="tab" href="#nav-articles" role="tab" aria-controls="nav-articles" aria-selected="false">Articles</a>
@@ -82,7 +82,7 @@
             <!-- TOTAL STATS -->
             <div class="row py-4">
               <div class="col-md">
-                <div class="card">
+                <div class="card mb-3 mb-md-0">
                   <div class="card-body text-center">
                     <h3 class="text-primary"><b>350</b></h3>
                     <span>Downloads</span>
@@ -90,7 +90,7 @@
                 </div>
               </div>
               <div class="col-md">
-                <div class="card">
+                <div class="card mb-3 mb-md-0">
                   <div class="card-body text-center">
                     <h3 class="text-primary"><b>1240</b></h3>
                     <span>Views</span>
@@ -98,7 +98,7 @@
                 </div>
               </div>
               <div class="col-md">
-                <div class="card">
+                <div class="card mb-3 mb-md-0">
                   <div class="card-body text-center">
                     <h3 class="text-primary"><b>17</b></h3>
                     <span>Articles</span>
@@ -106,7 +106,7 @@
                 </div>
               </div>
             </div>
-            <!-- CHART -->
+            <!-- TOP VIEWED -->
             <div class="row py-4">
               <div class="col">
                 <h4>Top viewed articles</h4>
@@ -126,13 +126,52 @@
                 </ul>
               </div>
             </div>
+            <!-- TOP CITED -->
+            <div class="row py-4">
+              <div class="col">
+                <h4>Top cited articels</h4>
+                <ul class="list-group">
+                  <li class="list-group-item d-flex justify-content-between">
+                    <a href="">The Wireless Energy Transfer recharging system based on the ultra-high frequency by using Yagi-Uda directional antenna</a>
+                    <span class="pl-3">35 times</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between">
+                    <a href="">Comparison of machine learning algorithms for soil type classification</a> 
+                    <span class="pl-3">28 times</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between">
+                    <a href="">Data service orchestration for law enforcement and open criminal justice data interoperability (National Crime Information... </a>
+                    <span class="pl-3">23 times</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
+          <!-- CHART -->
+          <div class="row py-4">
+            <!-- views chart -->
+            <div class="col-md-6">
+              <h4>Views</h4>
+              <canvas id="viewsChart" height="200"></canvas>
+            </div>
+            <!-- Citation chart -->
+            <div class="col-md-6">
+              <h4>Citations</h4>
+              <canvas id="citationChart" height="200"></canvas>
+            </div>
+          </div>
+
+
           <div class="tab-pane fade" id="nav-metadata" role="tabpanel" aria-labelledby="nav-metadata-tab">
             
           </div>
+
+
           <div class="tab-pane fade" id="nav-articles" role="tabpanel" aria-labelledby="nav-articles-tab">
             
           </div>
+
+
           <div class="tab-pane fade" id="nav-reports" role="tabpanel" aria-labelledby="nav-reports-tab">
             
           </div>
@@ -148,5 +187,49 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.js"></script>
+    <!-- Chart Js -->
+    <script src="js/Chart.js"></script>
+
+    <!-- CHART SCRIPT -->
+    <script type="text/javascript">
+      /*
+      * Views chart
+      */
+      var ctx = $("#viewsChart");
+      var viewsChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+              labels: ["January", "February", "March", "April", "May", "June"],
+              datasets: [{
+                  label: 'article views',
+                  data: [20, 13, 30, 26, 33, 49],
+                  borderColor: [
+                      '#3b77a4',
+                  ],
+                  fill: false,
+              }]
+          },
+      });
+
+      /*
+      * Citations chart
+      */
+      var ctx2 = $("#citationChart");
+      var citationChart = new Chart(ctx2, {
+          type: 'line',
+          data: {
+              labels: ["January", "February", "March", "April", "May", "June"],
+              datasets: [{
+                  label: 'article views',
+                  data: [5, 3, 6, 10, 8, 5],
+                  borderColor: [
+                      '#3b77a4',
+                  ],
+                  fill: false,
+              }]
+          },
+      });
+    </script>
+
   </body>
 </html>
