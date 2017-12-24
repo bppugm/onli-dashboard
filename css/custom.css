@@ -55,7 +55,7 @@ body {
 }
 
 /*
-* ARTICLE LIST CLASS
+* PROCEEDINGS LIST CLASS
 */
 .paper-info, .action {
 	padding-top: 10px;
@@ -71,6 +71,19 @@ body {
 	top: 65px;
 	z-index: 1010;
 }
+
+/*
+* ARTICLE LIST
+*/
+
+ul.articles {
+	padding-left: 0;
+}
+
+.row .article-item {
+
+}
+
 
 /*
 *
