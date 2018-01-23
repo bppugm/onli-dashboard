@@ -76,25 +76,49 @@
                   </div>
                   <div class='modal-body'>
                         <div class='form-group'>
+                          <input type='text' class='form-control' id='abstract' placeholder='Abstract' name='abstract[0]'>
+                        </div>
+                        <!-- 2 Dimension -->
+                        <div class='modal-content' id='packa0'>
+                          <div class='modal-header'>
+                            <h5 class='modal-title'>Author</h5>
+                            <button type='button' class='close' onClick='hpsa(0)'>&times;</button>
+                          </div>
+                          <div class='modal-body modal-custom2'>
+                            <div class='form-group'>
+                              <input type='text' class='form-control' id='author_name' placeholder='Author Name' name='author_name[0][0]'>
+                            </div>
+                            <div class='form-group'>
+                              <input type='text' class='form-control' id='author_affiliation' placeholder='Author Affiliation' name='author_affiliation[0][0]'>
+                            </div>
+                            <div class='form-group'>
+                              <input type='text' class='form-control' id='author_email' placeholder='Author Email' name='author_email[0][0]'>
+                            </div>
+                          </div>
+                            <div class='modal-footer'>
+                              <input type='button' class='btn btn-primary' onClick='tambaha()' value='Add'><br>
+                            </div>
+                        </div>
+                        <div id='inputa0'></div>
+                        <!-- 2 Dimension -->
+                        <br>
+                        <div class='form-group'>
+                          <input type='text' class='form-control' id='end_page' placeholder='End Page' name='end_page[0]'>
+                        </div>
+                        <div class='form-group'>
+                          <input type='text' class='form-control' id='file_type' placeholder='File Type' name='file_type[0]'>
+                        </div>
+                        <div class='form-group'>
+                          <input type='text' class='form-control' id='keywords' placeholder='Keywords' name='keywords[0]'>
+                        </div>
+                        <div class='form-group'>
+                          <input type='text' class='form-control' id='start_page' placeholder='Start Page' name='start_page[0]'>
+                        </div>
+                        <div class='form-group'>
                           <input type='text' class='form-control' id='title' placeholder='Title' name='tite[0]'>
                         </div>
                         <div class='form-group'>
-                          <textarea class='form-control' id='introduction' placeholder='Introduction' name='introduction[0]'></textarea>
-                        </div>
-                        <div class='form-group'>
-                          <input type='text' class='form-control' id='editorInChief' placeholder='Editor in Chief' name='editorInChief[0]'>
-                        </div>
-                        <div class='form-group'>
-                          <input type='text' class='form-control' id='managingEditor' placeholder='Managing editor' name='managingEditor[0]'>
-                        </div>
-                        <div class='form-group'>
-                          <input type='text' class='form-control' id='editorialBoard' placeholder='Editorial board' name='editorialBoard[0]'>
-                        </div>
-                        <div class='form-group'>
-                          <input type='text' class='form-control' id='eISBN' placeholder='eISBN' name='eISBN[0]'>
-                        </div>
-                        <div class='form-group'>
-                          <input type='text' class='form-control' id='podISBN' placeholder='PoD ISBN' name='podISBN[0]'>
+                          <input type='text' class='form-control' id='proceeding_id' placeholder='Proceeding ID' name='proceeding_id[0]'>
                         </div>
                         <div class='modal-content forms-footer'>
                           <input type='button' class='btn btn-primary' onClick='tambah()' value='Add'><br>
@@ -123,14 +147,27 @@
       z = x ;
       document.getElementById("pack"+z).innerHTML = "";
     }
+    function hpsa(x) {
+      z = x ;
+      document.getElementById("packa"+z).innerHTML = "";
+    }
     </script>
     <script language="JavaScript" type="text/JavaScript">
       counter = 0;
       function tambah() {
         counterNext = counter + 1;
         counterId = counter + 1;
-        document.getElementById("input"+counter).innerHTML = "<br><div class='modal-content modal-custom' id=\"pack"+counterNext+"\"><div class='modal-header'><h4 class='modal-title'>Create New Article</h4><button type='button' class='close' onClick='hps("+counterNext+")'>&times;</button></div><div class='modal-body'><div class='form-group'><input type='text' class='form-control' id='title' placeholder='Title"+(counter+1)+"' name='tite["+(counter+1)+"]'></div><div class='form-group'><textarea class='form-control' id='introduction' placeholder='Introduction' name='introduction["+(counter+1)+"]'></textarea></div><div class='form-group'><input type='text' class='form-control' id='editorInChief' placeholder='Editor in Chief' name='editorInChief["+(counter+1)+"]'></div><div class='form-group'><input type='text' class='form-control' id='managingEditor' placeholder='Managing editor' name='managingEditor["+(counter+1)+"]'></div><div class='form-group'><input type='text' class='form-control' id='editorialBoard' placeholder='Editorial board' name='editorialBoard["+(counter+1)+"]'></div><div class='form-group'><input type='text' class='form-control' id='eISBN' placeholder='eISBN' name='eISBN["+(counter+1)+"]'></div><div class='form-group'><input type='text' class='form-control' id='podISBN' placeholder='PoD ISBN' name='podISBN["+(counter+1)+"]'></div></div></div><div id=\"input"+counterNext+"\"></div>";
+        document.getElementById("input"+counter).innerHTML = "<br><div class='modal-content modal-custom' id=\"pack"+counterNext+"\"><div class='modal-header'><h4 class='modal-title'>Create New Article</h4><button type='button' class='close' onClick='hps("+counterNext+")'>&times;</button></div><div class='modal-body'><div class='form-group'><input type='text' class='form-control' id='abstract' placeholder='Abstract' name='abstract["+(counter+1)+"]'></div><br><div class='form-group'><input type='text' class='form-control' id='end_page' placeholder='End Page' name='end_page["+(counter+1)+"]'></div><div class='form-group'><input type='text' class='form-control' id='file_type' placeholder='File Type' name='file_type["+(counter+1)+"]'></div><div class='form-group'><input type='text' class='form-control' id='keywords' placeholder='Keywords' name='keywords["+(counter+1)+"]'></div><div class='form-group'><input type='text' class='form-control' id='start_page' placeholder='Start Page' name='start_page["+(counter+1)+"]'></div><div class='form-group'><input type='text' class='form-control' id='title' placeholder='Title' name='tite["+(counter+1)+"]'></div><div class='form-group'><input type='text' class='form-control' id='proceeding_id' placeholder='Proceeding ID' name='proceeding_id["+(counter+1)+"]'></div></div></div><div id=\"input"+counterNext+"\"></div>";
         counter++;
+      }
+    </script>
+    <script language="JavaScript" type="text/JavaScript">
+      countera = 0;
+      function tambaha() {
+        counteraNext = countera + 1;
+        counteraId = countera + 1;
+        document.getElementById("inputa"+countera).innerHTML = "<br><div class='modal-content' id=\"packa"+counteraNext+"\"><div class='modal-header'><h5 class='modal-title'>Author "+(countera+2)+"</h5><button type='button' class='close' onClick='hpsa("+counteraNext+")'>&times;</button></div><div class='modal-body modal-custom2'><div class='form-group'><input type='text' class='form-control' id='author_name' placeholder='Author Name["+(counter)+"]["+(countera+1)+"]' name='author_name["+(countera+1)+"]'></div><div class='form-group'><input type='text' class='form-control' id='author_affiliation' placeholder='Author Affiliation' name='author_affiliation["+(countera+1)+"]'></div><div class='form-group'><input type='text' class='form-control' id='author_email' placeholder='Author Email' name='author_email["+(countera+1)+"]'></div></div><div class='modal-footer'><input type='button' class='btn btn-primary' onClick='tambaha()' value='Add'><br></div></div><div id=\"inputa"+counteraNext+"\"></div>";
+        countera++;
       }
     </script>
   </body>
