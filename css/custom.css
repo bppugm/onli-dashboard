@@ -88,6 +88,16 @@ ul.articles {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.125);*/
 }
 
+.modal-custom {
+	width: 50%;
+}
+.forms-footer {
+	position: fixed;
+	float: right;
+	right: 25px;
+	top: 200px;
+	padding: 20px 10px 20px 10px;
+}
 
 /*
 *
