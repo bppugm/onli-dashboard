@@ -55,86 +55,115 @@
     </nav>
     
     <div class="container-fluid pt-5 px-md-5">
+
       <!-- HEADER -->
       <section class="header py-5">
         <div class="row justify-content-between">
-          <!-- <div class="col-md-6 mb-3 mb-md-0">
-            <h2>Add new article</h2>
-          </div> -->
+          <div class="col-md-6 mb-3 mb-md-0">
+            <h2>Create articles</h2>
+          </div>
+          <div class="col-md-2">
+            <button onclick="addItem()" type="button" class="btn btn-block btn-primary"><i class="fa fa-plus fa-fw"></i> Add item</button>
+          </div>
         </div>
       </section>
 
       <!-- BODY -->
       <section class="body pb-5">
-            <!-- Modal New Proc-->
-              <center>
-                    <form>
-                <div class='modal-content modal-custom' id='pack0'>
-                  <div class='modal-header'>
-                    <h4 class='modal-title'>Create New Article</h4>
-                    <button type='button' class='close' onClick='hps(0)'>&times;</button>
+        <div class="row">
+          <div class="col-lg-8">
+            <form id="form" method="POST" action="">
+              <div class="card" style="border: none;">
+                <div class="card-body">
+                  <div class="form-separator">
+                    <h5>Article details</h5>
                   </div>
-                  <div class='modal-body'>
-                        <div class='form-group'>
-                          <input type='text' class='form-control' id='abstract' placeholder='Abstract' name='abstract[0]'>
-                        </div>
-                        <!-- 2 Dimension -->
-                        <div class='modal-content' id='packa0'>
-                          <div class='modal-header'>
-                            <h5 class='modal-title'>Author</h5>
-                            <button type='button' class='close' onClick='hpsa(0)'>&times;</button>
-                          </div>
-                          <div class='modal-body modal-custom2'>
-                            <div class='form-group'>
-                              <input type='text' class='form-control' id='author_name' placeholder='Author Name' name='author_name[0][0]'>
-                            </div>
-                            <div class='form-group'>
-                              <input type='text' class='form-control' id='author_affiliation' placeholder='Author Affiliation' name='author_affiliation[0][0]'>
-                            </div>
-                            <div class='form-group'>
-                              <input type='text' class='form-control' id='author_email' placeholder='Author Email' name='author_email[0][0]'>
-                            </div>
-                          </div>
-                            <div class='modal-footer'>
-                              <input type='button' class='btn btn-primary' onClick='tambaha()' value='Add'><br>
-                            </div>
-                        </div>
-                        <div id='inputa0'></div>
-                        <!-- 2 Dimension -->
-                        <br>
-                        <div class='form-group'>
-                          <input type='text' class='form-control' id='end_page' placeholder='End Page' name='end_page[0]'>
-                        </div>
-                        <div class='form-group'>
-                          <input type='text' class='form-control' id='file_type' placeholder='File Type' name='file_type[0]'>
-                        </div>
-                        <div class='form-group'>
-                          <input type='text' class='form-control' id='keywords' placeholder='Keywords' name='keywords[0]'>
-                        </div>
-                        <div class='form-group'>
-                          <input type='text' class='form-control' id='start_page' placeholder='Start Page' name='start_page[0]'>
-                        </div>
-                        <div class='form-group'>
-                          <input type='text' class='form-control' id='title' placeholder='Title' name='tite[0]'>
-                        </div>
-                        <div class='form-group'>
-                          <input type='text' class='form-control' id='proceeding_id' placeholder='Proceeding ID' name='proceeding_id[0]'>
-                        </div>
-                        <div class='modal-content forms-footer'>
-                          <input type='button' class='btn btn-primary' onClick='tambah()' value='Add'><br>
-                          <input type='button' class='btn btn-default' value='Save'>
-                        </div>
+                  <div class="form-group row">
+                    <label for="title" class="col-sm-2 col-form-label">Title</label>
+                    <div class="col-sm-10">
+                      <textarea class="form-control" name="title" id="title" rows="1"></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="start_page" class="col-sm-2 col-form-label">Page</label>
+                    <div class="col-sm-5">
+                      <input name="start_page" type="number" class="form-control mb-2 mb-sm-0" id="start_page" placeholder="Start page">
+                    </div>
+                    <div class="col-sm-5">
+                      <input name="end_page" type="number" class="form-control mb-2 mb-sm-0" id="end_page" placeholder="End page">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="abstract" class="col-sm-2 col-form-label">Abstract</label>
+                    <div class="col-sm-10">
+                      <textarea class="form-control" name="abstract" id="abstract" rows="5"></textarea>
+                    </div>
+                  </div>
+                  <div class="form-separator mt-5">
+                    <h5>File</h5>
+                  </div>
+                  <div class="form-group row">
+                    <label for="title" class="col-sm-2 col-form-label">File type</label>
+                    <div class="col-md-5 col-12">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="file_type" id="file_type_pdf" value="pdf"onclick="showPdfInput()" checked>
+                        <label class="form-check-label" for="file_type_pdf">
+                          PDF File
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="file_type" id="file_type_scopus" value="scopus" onclick="showLinkInput()">
+                        <label class="form-check-label" for="file_type_scopus">
+                          Indexed by Scopus
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="file_type" id="file_type_doaj" value="doaj" onclick="showLinkInput()">
+                        <label class="form-check-label" for="file_type_doaj">
+                          Indexed by DOAJ
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row" id="file_link" style="display: none;">
+                    <label for="file_link" class="col-sm-2 col-form-label">Link</label>
+                    <div class="col-md-10 col-12">
+                      <input type="text" name="file_link" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group row" id="file_pdf">
+                    <label for="file_pdf" class="col-sm-2 col-form-label">Upload PDF</label>
+                    <div class="col-md-5 col-12">
+                      <input type="file" name="file_pdf" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-separator mt-5">
+                    <h5 >Authors</h5>
+                  </div>
+                  <div class="form-group row">
+                    <label for="title" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-md-5 col-12">
+                      <input type="text" name="name" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="title" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-md-5 col-12">
+                      <input type="email" name="email" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="title" class="col-sm-2 col-form-label">Affiliation</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="affiliation" class="form-control">
+                    </div>
                   </div>
                 </div>
-                <div id='input0'></div>
-                    </form>
-              </center>
+              </div>
+            </form>
           </div>
         </div>
       </section>
-
-      
-
     </div>
 
     <!-- Optional JavaScript -->
@@ -142,32 +171,18 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.js"></script>
-    <script language="JavaScript" type="text/JavaScript">
-    function hps(x) {
-      z = x ;
-      document.getElementById("pack"+z).innerHTML = "";
-    }
-    function hpsa(x) {
-      z = x ;
-      document.getElementById("packa"+z).innerHTML = "";
-    }
-    </script>
-    <script language="JavaScript" type="text/JavaScript">
-      counter = 0;
-      function tambah() {
-        counterNext = counter + 1;
-        counterId = counter + 1;
-        document.getElementById("input"+counter).innerHTML = "<br><div class='modal-content modal-custom' id=\"pack"+counterNext+"\"><div class='modal-header'><h4 class='modal-title'>Create New Article</h4><button type='button' class='close' onClick='hps("+counterNext+")'>&times;</button></div><div class='modal-body'><div class='form-group'><input type='text' class='form-control' id='abstract' placeholder='Abstract' name='abstract["+(counter+1)+"]'></div><br><div class='form-group'><input type='text' class='form-control' id='end_page' placeholder='End Page' name='end_page["+(counter+1)+"]'></div><div class='form-group'><input type='text' class='form-control' id='file_type' placeholder='File Type' name='file_type["+(counter+1)+"]'></div><div class='form-group'><input type='text' class='form-control' id='keywords' placeholder='Keywords' name='keywords["+(counter+1)+"]'></div><div class='form-group'><input type='text' class='form-control' id='start_page' placeholder='Start Page' name='start_page["+(counter+1)+"]'></div><div class='form-group'><input type='text' class='form-control' id='title' placeholder='Title' name='tite["+(counter+1)+"]'></div><div class='form-group'><input type='text' class='form-control' id='proceeding_id' placeholder='Proceeding ID' name='proceeding_id["+(counter+1)+"]'></div></div></div><div id=\"input"+counterNext+"\"></div>";
-        counter++;
+
+    <script type="text/javascript">
+      var index = 0
+
+      function showLinkInput() {
+        $('#file_link').show();
+        $('#file_pdf').hide();
       }
-    </script>
-    <script language="JavaScript" type="text/JavaScript">
-      countera = 0;
-      function tambaha() {
-        counteraNext = countera + 1;
-        counteraId = countera + 1;
-        document.getElementById("inputa"+countera).innerHTML = "<br><div class='modal-content' id=\"packa"+counteraNext+"\"><div class='modal-header'><h5 class='modal-title'>Author "+(countera+2)+"</h5><button type='button' class='close' onClick='hpsa("+counteraNext+")'>&times;</button></div><div class='modal-body modal-custom2'><div class='form-group'><input type='text' class='form-control' id='author_name' placeholder='Author Name["+(counter)+"]["+(countera+1)+"]' name='author_name["+(countera+1)+"]'></div><div class='form-group'><input type='text' class='form-control' id='author_affiliation' placeholder='Author Affiliation' name='author_affiliation["+(countera+1)+"]'></div><div class='form-group'><input type='text' class='form-control' id='author_email' placeholder='Author Email' name='author_email["+(countera+1)+"]'></div></div><div class='modal-footer'><input type='button' class='btn btn-primary' onClick='tambaha()' value='Add'><br></div></div><div id=\"inputa"+counteraNext+"\"></div>";
-        countera++;
+
+      function showPdfInput() {
+        $('#file_link').hide();
+        $('#file_pdf').show();
       }
     </script>
   </body>
