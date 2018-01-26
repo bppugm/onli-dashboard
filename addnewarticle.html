@@ -186,7 +186,7 @@
         $('#file_pdf').show();
       }
 
-      var affiliations = [$('#author1').val()];
+      var affiliations = [];
       var index = 1
 
       function addAuthor() {
@@ -197,15 +197,14 @@
           affiliations.push(lastInput);
         }
 
-        $('#cardBody').append('<div class="form-separator mt-4 bg-white"><div class="d-flex justify-content-between align-items-baseline"><h5 >Author #'+index+'</h5></div></div><div class="form-group row"><label for="title" class="col-sm-2 col-form-label">Name</label><div class="col-md-5 col-12"><input type="text" name="name" class="form-control"></div></div><div class="form-group row"><label for="title" class="col-sm-2 col-form-label">Email</label><div class="col-md-5 col-12"><input type="email" name="email" class="form-control"></div></div><div class="form-group row"><label for="title" class="col-sm-2 col-form-label">Affiliation</label><div class="col-sm-10" id="affiliationsGroup'+index+'"></div></div>')
+        $('#cardBody').append('<div class="form-separator mt-4 bg-white"><div class="d-flex justify-content-between align-items-baseline"><h5 >Author #'+index+'</h5></div></div><div class="form-group row"><label for="name" class="col-sm-2 col-form-label">Name</label><div class="col-md-5 col-12"><input type="text" name="name['+index+']" class="form-control"></div></div><div class="form-group row"><label for="email" class="col-sm-2 col-form-label">Email</label><div class="col-md-5 col-12"><input type="email" name="email['+index+']" class="form-control"></div></div><div class="form-group row"><label for="affiliation" class="col-sm-2 col-form-label">Affiliation</label><div class="col-sm-10" id="affiliationsGroup'+index+'"></div></div>')
 
         function appendItems(item, key) {
-          $('#affiliationsGroup'+index).append('<div class="form-check"><input class="form-check-input" type="radio" value="'+item+'" id="check'+index+'"><label class="form-check-label" for="check'+index+'">'+item+'</label></div>');
+          $('#affiliationsGroup'+index).append('<div class="form-check mb-2"><input class="form-check-input" name="check'+index+'" type="radio" value="'+item+'" id="check'+index+'"><label class="form-check-label" for="check'+index+'">'+item+'</label></div>');
         }
 
         affiliations.forEach(appendItems)
-
-        $('#affiliationsGroup'+index).append('<input type="text" placeholder="others" name="affiliation" class="form-control mt-2" id="author'+index+'">')
+          $('#affiliationsGroup'+index).append('<div class="form-check d-inline"><input class="form-check-input" name="check'+index+'" type="radio" id="check'+index+'"><label class="form-check-label" for="check'+index+'"><input type="text" placeholder="others" name="affiliation" class="form-control mt-2" id="author'+index+'"></label></div>');
       }
     </script>
   </body>
