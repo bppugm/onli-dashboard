@@ -68,8 +68,9 @@ body {
 
 /*make sticky nav below the navbar*/
 .sticky-top.sticky-nav {
-	top: 65px;
+	top: 50px;
 	z-index: 1010;
+	padding: 20px 0px 0px 0px;
 }
 
 /*
