@@ -137,8 +137,11 @@
                       <input type="file" name="file_pdf" class="form-control">
                     </div>
                   </div>
-                  <div class="form-separator mt-5">
-                    <h5 >Authors</h5>
+                  <div class="form-separator mt-4 sticky-top sticky-nav bg-white">
+                    <div class="d-flex justify-content-between align-items-baseline">
+                    <h5 >Authors </h5>
+                    <button onclick="addItem()" type="button" class="btn btn-primary mb-2"><i class="fa fa-plus fa-fw"></i>Add Author</button>
+                  </div>
                   </div>
                   <div class="form-group row">
                     <label for="title" class="col-sm-2 col-form-label">Name</label>
@@ -184,6 +187,23 @@
         $('#file_link').hide();
         $('#file_pdf').show();
       }
+    </script>
+    <script>
+      $(document).ready(function() {
+  
+      $(window).scroll(function () {
+          //if you hard code, then use console
+          //.log to determine when you want the 
+          //nav bar to stick.  
+          console.log($(window).scrollTop())
+        if ($(window).scrollTop() > 760) {
+          $('#sticky-author').addClass('author-fixed');
+        }
+        if ($(window).scrollTop() < 761) {
+          $('#sticky-author').removeClass('author-fixed');
+        }
+      });
+    });
     </script>
   </body>
 </html>
