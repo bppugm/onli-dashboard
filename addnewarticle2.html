@@ -73,7 +73,7 @@
         <div class="row">
           <div class="col-lg-8">
             <form id="form" method="POST" action="">
-              <div class="card">
+              <div class="card" style="border: none;">
                 <div class="card-body">
                   <div class="form-separator">
                     <h5>Article details</h5>
@@ -127,7 +127,7 @@
                   </div>
                   <div class="form-group row" id="file_link" style="display: none;">
                     <label for="file_link" class="col-sm-2 col-form-label">Link</label>
-                    <div class="col-md-5 col-12">
+                    <div class="col-md-10 col-12">
                       <input type="text" name="file_link" class="form-control">
                     </div>
                   </div>
@@ -138,7 +138,7 @@
                     </div>
                   </div>
                   <div class="form-separator mt-5">
-                    <h5>Author</h5>
+                    <h5 >Authors</h5>
                   </div>
                   <div class="form-group row">
                     <label for="title" class="col-sm-2 col-form-label">Name</label>
@@ -164,9 +164,6 @@
           </div>
         </div>
       </section>
-
-      
-
     </div>
 
     <!-- Optional JavaScript -->
@@ -175,45 +172,8 @@
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.js"></script>
 
-    <script id="article_item" type="text/HTML">
-      <div class="card">
-        <div class="card-header">
-          <button type="button" class="close" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="card-body">
-          <div class="form-group row">
-            <label for="title" class="col-sm-2 col-form-label">Title</label>
-            <div class="col-sm-10">
-              <textarea class="form-control" name="title" id="title" rows="1"></textarea>
-            </div>
-          </div>
-          <div class="form-group row">
-            <label for="start_page" class="col-sm-2 col-form-label">Page</label>
-            <div class="col-sm-5">
-              <input name="start_page" type="number" class="form-control mb-2 mb-sm-0" id="start_page" placeholder="Start page">
-            </div>
-            <div class="col-sm-5">
-              <input name="end_page" type="number" class="form-control mb-2 mb-sm-0" id="end_page" placeholder="End page">
-            </div>
-          </div>
-          <div class="form-group row">
-            <label for="abstract" class="col-sm-2 col-form-label">Abstract</label>
-            <div class="col-sm-10">
-              <textarea class="form-control" name="abstract" id="abstract" rows="5"></textarea>
-            </div>
-          </div>
-        </div>
-      </div>
-    </script>
-
     <script type="text/javascript">
       var index = 0
-
-      $(document).ready(function() {
-        // addItem()
-      });
 
       function showLinkInput() {
         $('#file_link').show();
@@ -223,11 +183,6 @@
       function showPdfInput() {
         $('#file_link').hide();
         $('#file_pdf').show();
-      }
-
-      function addItem() {
-        $('#form').append('<div id="card['+index+']" class="card mb-4"><div class="card-header"><button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="card-body"><div class="form-group row"><label for="title" class="col-sm-2 col-form-label">Title</label><div class="col-sm-10"><textarea class="form-control" name="title['+index+']" id="title" rows="1"></textarea></div></div><div class="form-group row"><label for="start_page" class="col-sm-2 col-form-label">Page</label><div class="col-sm-5"><input name="start_page['+index+']" type="number" class="form-control mb-2 mb-sm-0" id="start_page" placeholder="Start page"></div><div class="col-sm-5"><input name="end_page['+index+']" type="number" class="form-control mb-2 mb-sm-0" id="end_page" placeholder="End page"></div></div><div class="form-group row"><label for="abstract" class="col-sm-2 col-form-label">Abstract</label><div class="col-sm-10"><textarea class="form-control" name="abstract['+index+']" id="abstract" rows="5"></textarea></div></div></div></div>')
-        index++
       }
     </script>
   </body>
