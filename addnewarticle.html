@@ -188,22 +188,5 @@
         $('#file_pdf').show();
       }
     </script>
-    <script>
-      $(document).ready(function() {
-  
-      $(window).scroll(function () {
-          //if you hard code, then use console
-          //.log to determine when you want the 
-          //nav bar to stick.  
-          console.log($(window).scrollTop())
-        if ($(window).scrollTop() > 760) {
-          $('#sticky-author').addClass('author-fixed');
-        }
-        if ($(window).scrollTop() < 761) {
-          $('#sticky-author').removeClass('author-fixed');
-        }
-      });
-    });
-    </script>
   </body>
 </html>
